@@ -3,41 +3,49 @@
 :root {
   // global font size used to set the base scale of the content
   --global-font-size: 4vw;
+  --margin-container-spacing: 1.25rem;
+
   @include mq('>=desktop') {
     --global-font-size: 1.11111vw; // equal to 16px on a 1440px desktop screen (16px / 1440px = 1.11111vw)
     // why do we use a 1440px screen? default to the standard desktop screen size for designers
     // easy to scale font size and in between the 1024 and 1920 screen size which defines the range of screen standards
+    --margin-container-spacing: 10rem;
   }
 }
 
 // Font face example
-
-/*
-!* poppins-regular - latin *!
+/* poppins-regular - latin */
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: local(''), url('/fonts/poppins-v19-latin-regular.woff2') format('woff2'),
-    !* Chrome 26+, Opera 23+, Firefox 39+ *! url('/fonts/poppins-v19-latin-regular.woff') format('woff'); !* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ *!
+  src: local(''),
+    url('../fonts/poppins-v19-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/poppins-v19-latin-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-!* poppins-600 - latin *!
+
+/* poppins-500 - latin */
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local(''), url('/fonts/poppins-v19-latin-600.woff2') format('woff2'),
-    !* Chrome 26+, Opera 23+, Firefox 39+ *! url('/fonts/poppins-v19-latin-600.woff') format('woff'); !* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ *!
+  font-weight: 500;
+  src: local(''),
+    url('../fonts/poppins-v19-latin-500.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/poppins-v19-latin-500.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-*/
+
 
 html {
   --webkit-scrollbar-width: none;
   min-height: 100%;
   font-size: clamp(14px, var(--global-font-size), 20px);
   scroll-behavior: auto;
+  font-family: 'Poppins', sans-serif;
+
   @include mq('>=desktop') {
     min-height: initial;
   }
@@ -47,6 +55,7 @@ body {
   position: relative;
   text-rendering: optimizeSpeed;
   width: 100%;
+
   @include mq('>=desktop') {
     height: max-content;
   }
@@ -76,6 +85,7 @@ body {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   user-select: none;
+
   @include mq('>=desktop') {
     user-select: auto;
   }
@@ -90,4 +100,8 @@ body {
 img {
   width: 100%;
   object-fit: cover;
+}
+
+a {
+  color: $black;
 }

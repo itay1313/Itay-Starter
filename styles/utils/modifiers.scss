@@ -1,1 +1,11 @@
 // CSS classes that can be reuse on all pages goes there
+
+.margin-container {
+  margin-left: var(--margin-container-spacing);
+  margin-right: var(--margin-container-spacing);
+}
+
+.padding-container {
+  padding-left: var(--margin-container-spacing);
+  padding-right: var(--margin-container-spacing);
+}

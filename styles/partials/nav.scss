@@ -1,0 +1,37 @@
+nav {
+  ul {
+    display: none;
+
+
+    @include mq('>desktop') {
+      display: flex;
+      align-items: center;
+      grid-gap: $s * 6;
+
+      li {
+        a {
+          color: $green;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .banner {
+    display: none;
+    color: $beige;
+
+    @include mq('>desktop') {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $s * 25;
+      padding: $s * 22 $s * 4;
+      background-color: $green;
+    }
+  }
+}
