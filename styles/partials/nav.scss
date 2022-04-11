@@ -19,19 +19,4 @@ nav {
       }
     }
   }
-
-  .banner {
-    display: none;
-    color: $beige;
-
-    @include mq('>desktop') {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: $s * 25;
-      padding: $s * 22 $s * 4;
-      background-color: $green;
-    }
-  }
 }

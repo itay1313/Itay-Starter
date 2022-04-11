@@ -1,0 +1,77 @@
+.hero {
+  $containerHeight: 100% - 15%;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  background-color: $bg;
+  padding: 1rem;
+  color: $white;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  &__left-container {
+    border: 1px solid red;
+    height: $containerHeight;
+    margin-left: $s * 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .hero-subtitle {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-weight: bold;
+      margin-top: $s * 2.5;
+    }
+
+    .hero-text {
+      margin-top: $s * 5;
+      margin-bottom: $s * 5;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      color: white;
+      background-color: $green;
+      border-radius: $s * 1.5;
+      padding: $s * 2 $s * 4;
+      grid-gap: $s * 4;
+      margin-top: $s * 5;
+    }
+  }
+
+  &__right-container {
+    border: 1px solid green;
+    height: $containerHeight;
+    margin-right: $s * 15;
+    background-color: $beige;
+  }
+
+  &__partners-container {
+    grid-column: 1 / 3;
+    border: 1px solid blue;
+    height: 100% - $containerHeight;
+  }
+
+  @include mq('<desktop') {
+    display: flex;
+    flex-direction: column;
+    padding-top: $s * 10;
+
+    &__right-container {
+      margin-right: 0;
+    }
+
+    &__left-container {
+      margin-left: 0;
+    }
+  }
+}

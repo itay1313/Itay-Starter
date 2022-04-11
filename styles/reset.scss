@@ -8,22 +8,25 @@
 *::after {
   box-sizing: border-box;
 }
+
 * {
   margin: 0;
 }
+
 html,
 body {
   height: max-content;
 }
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
   text-rendering: optimizeSpeed;
   max-width: 100vw;
 }
+
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
   min-height: 100%;
   line-height: 1;
 }
@@ -35,12 +38,14 @@ canvas,
 svg {
   display: block;
 }
+
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
+
 p,
 h1,
 h2,
@@ -53,6 +58,7 @@ h6 {
 
 a {
   text-decoration: none;
+
   &[href] {
     cursor: pointer;
   }
@@ -61,6 +67,7 @@ a {
 li {
   list-style-type: none;
 }
+
 ul {
   padding: 0;
   margin: 0;

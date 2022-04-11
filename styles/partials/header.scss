@@ -1,5 +1,5 @@
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,6 +10,7 @@ header {
   justify-content: space-between;
   padding-top: $s * 2;
   padding-bottom: $s * 2;
+  z-index: 999;
 
   .header__left-part {
     display: flex;
@@ -30,7 +31,7 @@ header {
       span {
         font-size: $s * 3;
         font-weight: bold;
-        color: $black;
+        color: $white;
       }
     }
   }
@@ -43,7 +44,7 @@ header {
   }
 
   .mailto {
-    color: $green;
+    color: $white;
     opacity: 0.75;
     transition: opacity 250ms $easeInOut;
 
