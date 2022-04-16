@@ -5,7 +5,7 @@ export const siteConfig = {
   author: 'Itay Haephrati', // Author of the website.
   twitter: '@itaycode', // Twitter of the author.
   lang: 'en',
-  image: 'ogimage.jpg',
+  image: 'dog.jpg',
   url: 'https://www.staticstarter.com', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/sub-folder/.
   themeColor: '#EBE8DA', // Used for setting manifest and progress theme colors.

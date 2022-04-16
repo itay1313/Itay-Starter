@@ -16,6 +16,7 @@ header {
     display: flex;
     align-items: center;
     grid-gap: $s * 2;
+    flex-grow: 1;
 
     .full-logo {
       display: flex;
@@ -31,11 +32,15 @@ header {
       span {
         font-size: $s * 3;
         font-weight: bold;
-        color: $white;
+        color: $black;
       }
     }
-  }
 
+    @include mq('>desktop') {
+      width: 50%;
+    }
+
+  }
 
   .seperator {
     width: 1px;
@@ -44,7 +49,7 @@ header {
   }
 
   .mailto {
-    color: $white;
+    color: $black;
     opacity: 0.75;
     transition: opacity 250ms $easeInOut;
 

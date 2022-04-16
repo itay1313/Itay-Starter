@@ -5,21 +5,19 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  background-color: $bg;
-  padding: 1rem;
-  color: $white;
-  margin-bottom: 1rem;
+  background-color: $primary;
+  color: $black;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 
   &__left-container {
-    border: 1px solid red;
     height: $containerHeight;
-    margin-left: $s * 30;
+    margin-left: var(--margin-container-spacing);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding: 1rem;
 
     .hero-subtitle {
       text-transform: uppercase;
@@ -39,20 +37,48 @@
     .button {
       display: flex;
       align-items: center;
-      color: white;
-      background-color: $green;
+      color: $primary;
+      background-color: $black;
       border-radius: $s * 1.5;
       padding: $s * 2 $s * 4;
       grid-gap: $s * 4;
       margin-top: $s * 5;
+
+      &:hover {
+        background-color: $white;
+        color: $primary;
+      }
     }
   }
 
   &__right-container {
-    border: 1px solid green;
     height: $containerHeight;
-    margin-right: $s * 15;
+    margin-right: var(--margin-container-spacing);
     background-color: $beige;
+    // background: url(assets/img/dog.jpeg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .inner-img-bg {
+      position: absolute;
+      height: 100%;
+
+      width: 70vw;
+      object-fit: cover;
+    }
+
+    .inner-img {
+      position: absolute;
+      height: 100%;
+      bottom: 0;
+      width: 80%;
+      object-fit: contain;
+      object-position: bottom;
+    }
   }
 
   &__partners-container {
