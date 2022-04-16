@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import { imagetools } from 'vite-imagetools'
 import viteCompression from 'vite-plugin-compression'
 import handlebars from 'vite-plugin-handlebars'
-import viteImagemin from 'vite-plugin-imagemin'
 import { VitePWA } from 'vite-plugin-pwa'
 
 import { siteConfig } from './site.config'
@@ -101,7 +100,7 @@ export default defineConfig({
     viteCompression({
       algorithm: 'brotliCompress',
     }),
-    viteImagemin(imageminConfig), // disable this plugin for a faster build (but your images will not be optimized), only do this if you are manually optimizing your images
+    // viteImagemin(imageminConfig), // disable this plugin for a faster build (but your images will not be optimized), only do this if you are manually optimizing your images
     imagetools(),
     VitePWA(webManifest),
   ],
