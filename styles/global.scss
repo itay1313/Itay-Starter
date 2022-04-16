@@ -4,12 +4,14 @@
   // global font size used to set the base scale of the content
   --global-font-size: 4vw;
   --margin-container-spacing: 1.25rem;
+  --max-width: 90%;
 
   @include mq('>=desktop') {
     --global-font-size: 1.11111vw; // equal to 16px on a 1440px desktop screen (16px / 1440px = 1.11111vw)
     // why do we use a 1440px screen? default to the standard desktop screen size for designers
     // easy to scale font size and in between the 1024 and 1920 screen size which defines the range of screen standards
     --margin-container-spacing: 10rem;
+    --max-width: 80vw;
   }
 }
 

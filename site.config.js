@@ -1,6 +1,6 @@
 export const siteConfig = {
   titleTemplate: 'Itay Haephrati', // Site default title. <titleTemplate> - <title>
-  title: 'My new website', // Default title attached to the template if none is provided.
+  title: 'Funky dog', // Default title attached to the template if none is provided.
   description: 'Coding from the heart', // Website description used for meta description tag.
   author: 'Itay Haephrati', // Author of the website.
   twitter: '@itaycode', // Twitter of the author.

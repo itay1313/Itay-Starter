@@ -1,0 +1,22 @@
+main {
+  width: 100%;
+  background-color: $beige;
+  color: $black;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    gap: $s * 4;
+    padding: $s * 4;
+
+
+    h2 {
+      font-weight: bold;
+      margin-top: $s * 2.5;
+    }
+  }
+}
