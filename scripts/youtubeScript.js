@@ -6,7 +6,6 @@ export function youtubePlayerLoader() {
       if (entry.isIntersecting) {
         console.log('is entering')
         video.setAttribute('src', videoDataSrc)
-        observer.unobserve(video)
       }
     })
   })
