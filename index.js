@@ -1,14 +1,13 @@
-export function youtubePlayerLoader() {
-  const video = document.querySelector('iframe.video')
-  const videoDataSrc = video.getAttribute('data-src')
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        console.log('is entering')
-        video.setAttribute('src', videoDataSrc)
-        observer.unobserve(video)
-      }
-    })
-  })
-  observer.observe(video)
+import { youtubePlayerLoader } from './scripts/youtubeScript'
+
+async function init() {
+  // import all your functions/code there
+
+  youtubePlayerLoader()
+}
+
+if (document.readyState === 'complete') {
+  init()
+} else {
+  window.addEventListener('load', init)
 }
